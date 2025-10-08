@@ -10,7 +10,7 @@ dotenv.config({
 connectDB() //this is an async mehthod so it  returns promise so we can handle promises by using .then();
   .then(() => {
     app.on("error", (error) => {
-      console.log("App.ication is unable to connect with the database", error);
+      console.log("Application is unable to connect with the database", error);
       throw error;
     });
     app.listen(process.env.PORT || 8000, () => {
